@@ -1,0 +1,14 @@
+{
+  "todos": [
+    {
+      "id": "1",
+      "body": "buy groceries",
+      "datetime": "10th April 2025"
+    },
+    {
+      "id": 3,
+      "body": "make food",
+      "datetime": "5th April 2025"
+    }
+  ]
+}

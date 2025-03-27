@@ -1,1 +1,9 @@
 @import "tailwindcss";
+
+.todo-li {
+    @apply mx-3 flex justify-items-center;
+}
+
+.todo-stat-msg {
+    @apply flex items-center justify-center text-2xl;
+}

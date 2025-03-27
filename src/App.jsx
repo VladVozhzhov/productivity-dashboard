@@ -1,11 +1,11 @@
-import Helloworld from './Todo/Helloworld';
+import Todo from './Todo';
 
 function App() {
   return (
-    <div className='text-3xl'>
-      <Helloworld />
+    <div>
+      <Todo />
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
