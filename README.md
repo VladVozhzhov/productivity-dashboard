@@ -17,5 +17,5 @@ If the weather widget doesn`t work then:
     Sign in or log in
     Generate an API key
     Paste your API key into [./src/WeatherWidget.jsx](./src/WeatherWidget.jsx) to line 7:
-        > const apiKey = "a1781a6f73454c95be1204659252703"; 
+        > const apiKey = ""; 
         Replace the string in quotes with your WeatherAPI key
