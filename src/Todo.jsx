@@ -19,9 +19,7 @@ const Todo = () => {
 
   const { data, fetchError, isLoading } = useAxiosFetch('http://localhost:3500/todos');
 
-  useEffect(() => {
-    console.log("Fetched data:", data);
-  
+  useEffect(() => {  
     if (data && Array.isArray(data)) {
       setTodos(data); 
     } else if (data && data.todos && Array.isArray(data.todos)) {
@@ -79,7 +77,7 @@ const Todo = () => {
     }
   };
   return (
-    <div className='border-3 m-3 rounded-4xl'>
+    <div className='border-3 mb-6 rounded-4xl'>
       <NewTodo
         handleSubmit={handleSubmit}
         setTodoBody={setTodoBody}

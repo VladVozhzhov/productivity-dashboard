@@ -1,12 +1,20 @@
-# React + Vite
+# Productivity Dashboard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a small pet-project made to show my React.js skills. It includes a to-do list, where you can add or delete your to-do`s, a weather widget made with WeatherAPI. 
 
-Currently, two official plugins are available:
+## Usage
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+To run the website, open the console and run:
+    > npm run dev
+    and then follow the link that was stated in the console
+and in another console run:
+    > npx json-server --watch data/db.json --port 3500
 
-## Expanding the ESLint configuration
+## Weather Widget is not working
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+If the weather widget doesn`t work then:
+    Go to https://www.weatherapi.com
+    Sign in or log in
+    Generate an API key
+    Paste your API key into [./src/WeatherWidget.jsx](./src/WeatherWidget.jsx) to line 7:
+        > const apiKey = "a1781a6f73454c95be1204659252703"; Replace the string in quotes with your WeatherAPI key
