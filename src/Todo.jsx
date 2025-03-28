@@ -77,7 +77,7 @@ const Todo = () => {
     }
   };
   return (
-    <div className='border-3 mb-6 rounded-4xl'>
+    <section className='border-3 my-6 rounded-4xl'>
       <NewTodo
         handleSubmit={handleSubmit}
         setTodoBody={setTodoBody}
@@ -95,7 +95,7 @@ const Todo = () => {
         isLoading={isLoading}
         handleDelete={handleDelete}
       />
-    </div>
+    </section>
   );
 };
 

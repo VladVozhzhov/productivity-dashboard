@@ -1,12 +1,14 @@
-import Todo from './Todo';
 import WeatherWidjet from './WeatherWidget'
+import Todo from './Todo';
+import Timer from './Timer'
 
 function App() {
   return (
-    <div className='border-4 m-4 p-6 rounded-4xl'>
-      <Todo />
+    <main className='border-4 m-4 p-6 rounded-4xl'>
       <WeatherWidjet />
-    </div>
+      <Todo />
+      <Timer />
+    </main>
   );
 }
 

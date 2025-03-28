@@ -28,7 +28,7 @@ const WeatherWidget = () => {
     }, []);
 
     return (
-        <div className="border-3 rounded-4xl flex flex-col items-center justify-center text-center mx-3">
+        <section className="border-3 rounded-4xl flex flex-col items-center justify-center text-center mx-3">
             <h3 className="text-xl font-bold">Weather in Your Location</h3>
             {error && <p className="text-red-500">{error}</p>}
             {weather ? (
@@ -41,7 +41,7 @@ const WeatherWidget = () => {
             ) : !error ? (
                 <p>Loading...</p>
             ) : null}
-        </div>
+        </section>
     );
 };
 
