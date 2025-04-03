@@ -1,31 +1,36 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
+import secrets from '../secrets.js';
 
 const WeatherWidget = () => {
     const [weather, setWeather] = useState(null);
     const [error, setError] = useState(null);
-    const apiKey = "a1781a6f73454c95be1204659252703"; // Replace with your WeatherAPI key
+    const apiKey = secrets.tokens.weatherToken;
 
     useEffect(() => {
+        const fetchWeather = async (latitude, longitude) => {
+            const url = `https://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${latitude},${longitude}&aqi=no`;
+
+            try {
+                const response = await axios.get(url);
+                setWeather(response.data);
+            } catch (err) {
+                setError("Could not fetch weather. Check API key.");
+            }
+        };
+
         if (navigator.geolocation) {
             navigator.geolocation.getCurrentPosition(
-                async (position) => {
+                (position) => {
                     const { latitude, longitude } = position.coords;
-                    const url = `https://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${latitude},${longitude}&aqi=no`;
-
-                    try {
-                        const response = await axios.get(url);
-                        setWeather(response.data);
-                    } catch (err) {
-                        setError("Could not fetch weather. Check API key.");
-                    }
+                    fetchWeather(latitude, longitude);
                 },
                 () => setError("Location access denied.")
             );
         } else {
             setError("Geolocation not supported.");
         }
-    }, []);
+    }, [apiKey]);
 
     return (
         <section className="border-3 rounded-4xl flex flex-col items-center justify-center text-center mx-3">

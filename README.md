@@ -4,6 +4,8 @@ This is a small pet-project made to show my React.js skills. It includes a to-do
 
 ## Usage
 
+To install dependencies run: 
+    >npm install
 To run the website, open the console and run:
     > npm run dev
     and then follow the link that was stated in the console
